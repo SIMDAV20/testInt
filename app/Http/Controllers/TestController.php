@@ -43,9 +43,9 @@ class TestController extends Controller
     }
 
     private function changeValues($arrayFirst, $j, $qqt) {
-        // CON ESTE NUEVO ARREGLO EACH, SE REFIERE A CADA ARREGLO DEL ARREAGLO GRANDE DONDE,
-        // CADA POCISION $j SE REFIERE A LA PRIMERA POSICION DE CADA BLOQUE
-        // SUMANDOLE $qqt EN $i DEL FOR, PARA ENCONTRAR LA MISMA POSICION DEL SIGUIENTE BLOQUE
+        // CON ESTE NUEVO ARREGLO EACH, SE REFIERE A CADA ARREGLO DEL ARREGLO GRANDE DONDE
+        // CADA POCISION $j SE REFIERE A LA PRIMERA POSICION DE CADA $EACH
+        // SUMANDOLE $qqt EN $i EN EL FOR, PARA ENCONTRAR LA MISMA POSICION DEL SIGUIENTE BLOQUE
         $each = [];
         for ($i = 0; $i < count($arrayFirst); $i = $i + $qqt) {
             array_push($each, $arrayFirst[$i + $j]);
