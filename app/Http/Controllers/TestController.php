@@ -7,7 +7,12 @@ use Illuminate\Http\Request;
 class TestController extends Controller
 {
     public function test(Request $request) {
-        
+        /*  USE ESTE JSON PARA EL POSTMAN
+            {
+                "origin": [[1,2,3,4],[5,6,7,8], [9,10,11,12], [13,14,15,16]]
+            }
+        */
+
         $arrayOrigin = $request->origin;
         
         $qqt = count($arrayOrigin);
@@ -31,9 +36,9 @@ class TestController extends Controller
         // ITERO CON UN FOR - ME PARECIO MAS COMODO
         for ($j=0; $j < $qqt; $j++) {
             $getArray = $this->changeValues($arrayFirst, $j, $qqt);
-            array_unshift($arrayDestiny, $getArray);
+            array_unshift($arrayDestiny, $getArray); // INGRESO DEL BLOQUE ADELANTE DEL ANTERIOR
         }
-        
+
         return $arrayDestiny;
     }
 
